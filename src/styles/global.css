@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+  
+  body {
+    @apply bg-lightBg dark:bg-darkBg text-lightTextPrimary dark:text-darkTextPrimary;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-lightPrimary dark:bg-darkPrimary text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity duration-200 font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-lightSecondary dark:bg-darkSecondary text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity duration-200 font-medium;
+  }
+  
+  .btn-accent {
+    @apply bg-lightAccent dark:bg-darkAccent text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity duration-200 font-medium;
+  }
+  
+  .card {
+    @apply bg-lightCard dark:bg-darkCard rounded-xl shadow-lg border border-gray-200 dark:border-gray-700;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-darkCard text-lightTextPrimary dark:text-darkTextPrimary focus:ring-2 focus:ring-lightPrimary dark:focus:ring-darkPrimary focus:border-transparent;
+  }
+}
